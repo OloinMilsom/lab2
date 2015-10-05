@@ -3,12 +3,13 @@ function Player()
 	this.x = Math.random() * window.innerWidth;
 	this.y = Math.random() * window.innerHeight;
 	this.r = Math.random() * 255
+	this.g = Math.random() * 255
 	this.b = Math.random() * 255
 }
 
 Player.prototype.draw = function()
 {
-	ctx.fillStyle = game.rgb(this.r,0,this.b);
+	ctx.fillStyle = game.rgb(this.r,this.g,this.b);
 	ctx.fillRect(this.x, this.y, 30, 30);
 }
 
